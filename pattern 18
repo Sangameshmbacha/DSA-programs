@@ -1,0 +1,15 @@
+
+class Solution:
+    # Function to print pattern18
+    def pattern18(self, n):
+     
+        for i in range(n):
+            
+            """ Inner loop for printing alphabets
+            from 'A' + n - 1 - i to 'A' + n - 1."""
+            for ch in range(ord('A') + n - 1 - i, ord('A') + n):
+                print(chr(ch), end=" ")
+            
+         
+            print()
+
