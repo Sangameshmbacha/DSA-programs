@@ -1,0 +1,11 @@
+class Solution:
+    def arraySum(self, nums):
+       
+        return self.sum(nums, 0)
+
+    def sum(self, nums, left):
+        
+        if left >= len(nums):
+            return 0
+        
+        return nums[left] + self.sum(nums, left + 1)
