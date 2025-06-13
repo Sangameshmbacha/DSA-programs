@@ -1,0 +1,14 @@
+class Solution:
+    def isSorted(self, nums):
+   
+        nums = list(nums)
+        if len(nums) <= 1:
+            return True
+        return self.sort(nums, 0, 1)
+    
+    def sort(self, nums, left, right):
+        if right >= len(nums):
+            return True
+        if nums[left] > nums[right]:
+            return False
+        return self.sort(nums, left + 1, right + 1)
