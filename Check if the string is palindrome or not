@@ -1,0 +1,13 @@
+class Solution:
+    def palindromeCheck(self, s: str) -> bool:
+      
+        return self.isPalindrome(s, 0, len(s) - 1)
+    
+    def isPalindrome(self, s: str, left: int, right: int) -> bool:
+       
+        if left >= right:
+            return True
+       
+        if s[left] != s[right]:
+            return False 
+        return self.isPalindrome(s, left + 1, right - 1)
