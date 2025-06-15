@@ -1,0 +1,6 @@
+class Solution:
+    def addDigits(self, num):
+        if num < 10:
+            return num
+        
+        return self.addDigits(sum(int(digit) for digit in str(num)))
