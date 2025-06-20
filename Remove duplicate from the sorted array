@@ -1,0 +1,13 @@
+class Solution:
+    def removeDuplicates(self, nums):
+        
+        s = set()
+        
+        for val in nums:
+            s.add(val)
+        
+        sorted_unique = sorted(s)
+         
+        for j in range(len(sorted_unique)):
+            nums[j] = sorted_unique[j]
+        return len(sorted_unique)
