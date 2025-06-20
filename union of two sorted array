@@ -1,0 +1,15 @@
+class Solution:
+    def unionArray(self, nums1, nums2):
+        s = set()
+        Union = []
+
+        for num in nums1:
+            s.add(num)
+
+        for num in nums2:
+            s.add(num)
+
+        for num in sorted(s): 
+            Union.append(num)
+
+        return Union
