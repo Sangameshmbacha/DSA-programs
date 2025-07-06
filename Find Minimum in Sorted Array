@@ -1,0 +1,9 @@
+class Solution:
+    def findMin(self, arr):
+        
+        mini = float('inf') 
+        for num in arr:
+            
+            
+            mini = min(mini, num) 
+        return mini 
