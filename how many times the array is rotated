@@ -1,0 +1,14 @@
+class Solution:
+   
+    def findKRotation(self, nums):
+        n = len(nums)
+     
+        ans = float('inf')
+        index = -1
+        
+     
+        for i in range(n):
+            if nums[i] < ans:
+                ans = nums[i] 
+                index = i      
+        return index
