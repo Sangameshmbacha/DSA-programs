@@ -1,0 +1,26 @@
+class Solution:
+
+    def func(self, b, exp):
+        ans = 1
+        base = b
+        
+     
+        while exp > 0:
+            if exp % 2 == 1:
+                exp -= 1
+                ans *= base
+            else:
+                exp //= 2
+                base *= base
+        return ans
+
+  
+    def NthRoot(self, N: int, M: int) -> int:
+        for i in range(1, M + 1):
+            val = self.func(i, N)
+
+            if val == M:
+                return i
+            elif val > M:
+                break
+        return -1
