@@ -1,0 +1,16 @@
+class Solution:
+    def solve(self, i, n, arr, k):
+        if k == 0:
+            return True
+        if k < 0:
+            return False
+        if i == n:
+            return k == 0
+        
+        
+        return self.solve(i + 1, n, arr, k - arr[i]) or self.solve(i + 1, n, arr, k)
+
+   
+    def checkSubsequenceSum(self, nums, target):
+        n = len(nums) 
+        return self.solve(0, n, nums, target) 
