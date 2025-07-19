@@ -1,0 +1,10 @@
+class Solution:
+    def func(self, ind, sum, nums):
+        if sum == 0:
+            return 1
+        if sum < 0 or ind == len(nums):
+            return 0
+        return self.func(ind + 1, sum - nums[ind], nums) + self.func(ind + 1, sum, nums)
+
+    def countSubsequenceWithTargetSum(self, nums, target):
+        return self.func(0, target, nums)
